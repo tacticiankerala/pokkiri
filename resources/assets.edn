@@ -1,0 +1,2 @@
+{"bundle.css" ["bulma.min.css" "app.css"]
+ "bundle.js" ["compiled/main.js"]}

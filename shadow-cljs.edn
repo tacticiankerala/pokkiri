@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/cljs"]
+
+ :dependencies
+ []
+
+:nrepl {:port 8230}
+
+ :builds
+ {:app {:target :browser
+                :output-dir "resources/public/js/compiled"
+                :asset-path "/js/compiled/"
+                :devtools {:watch-dir "resources/public"
+                           :after-load app.main/main!}
+                        ; "main.js" is the name for the bundle entry
+                :modules {:main {:init-fn app.main/main!}}}}}
